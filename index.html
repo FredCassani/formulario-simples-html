@@ -1,0 +1,193 @@
+html<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Formulário</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .image {
+      margin-left: 450px;
+      
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #e7e7c4;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-section {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="time"],
+    select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"],
+    .pdf-button {
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    input[type="submit"]:hover,
+    .pdf-button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body style="background-color: #83840d;">
+  <div class="container">
+    <form action="seu_script.php" method="post" id="form">
+      <div class="form-section">
+        <label for="uf">UF</label>
+        <input type="text" id="uf" name="uf">
+        
+        <label for="municipio">Município</label>
+        <input type="text" id="municipio" name="municipio">
+        
+        <label for="ano_referencia">Ano de referência</label>
+        <input type="text" id="ano_referencia" name="ano_referencia">
+        
+        <label for="numero_amostra">Número da amostra (1)</label>
+        <input type="text" id="numero_amostra" name="numero_amostra">
+        
+        <label for="motivo_coleta">Motivo da coleta (2)</label>
+        <input type="text" id="motivo_coleta" name="motivo_coleta">
+        
+        <label for="responsavel_coleta">Responsável pela coleta</label>
+        <input type="text" id="responsavel_coleta" name="responsavel_coleta">
+        
+        <label for="data_laudo">Data do laudo</label>
+        <input type="date" id="data_laudo" name="data_laudo">
+        
+        <label for="responsavel_formulario">Responsável pelas informações do formulário</label>
+        <input type="text" id="responsavel_formulario" name="responsavel_formulario">
+        
+        <label for="data_preenchimento">Data preenchimento</label>
+        <input type="date" id="data_preenchimento" name="data_preenchimento">
+        
+        <label for="assinatura_responsavel">Assinatura do responsável pelas informações</label>
+        <input type="text" id="assinatura_responsavel" name="assinatura_responsavel">
+      </div>
+      
+      <div class="form-section">
+        <label for="forma_abastecimento">Forma de abastecimento ou carro-pipa (3)</label>
+        <input type="text" id="forma_abastecimento" name="forma_abastecimento">
+        
+        <label for="codigo_sisagua">Código (Sisagua) (4)</label>
+        <input type="text" id="codigo_sisagua" name="codigo_sisagua">
+        
+        <label for="nome_abastecimento">Nome da forma de abastecimento ou placa do carro-pipa (Sisagua) (5)</label>
+        <input type="text" id="nome_abastecimento" name="nome_abastecimento">
+      </div>
+      
+      <div class="form-section">
+        <label for="procedencia_coleta">Procedência de coleta (6)</label>
+        <input type="text" id="procedencia_coleta" name="procedencia_coleta">
+        
+        <label for="ponto_coleta">Ponto de coleta (7)</label>
+        <input type="text" id="ponto_coleta" name="ponto_coleta">
+        
+        <label for="eta_uta">Nome da ETA/UTA(8)</label>
+        <input type="text" id="eta_uta" name="eta_uta">
+        
+        <label for="nome_area">Nome da Área (9)</label>
+        <input type="text" id="nome_area" name="nome_area">
+        
+        <label for="nome_local">Nome do Local (10)</label>
+        <input type="text" id="nome_local" name="nome_local">
+        
+        <label for="endereco_local">Endereço do local(11)</label>
+        <input type="text" id="endereco_local" name="endereco_local">
+        
+        <label for="latitude">Latitude(11)</label>
+        <input type="text" id="latitude" name="latitude">
+        
+        <label for="longitude">Longitude(11)</label>
+        <input type="text" id="longitude" name="longitude">
+        
+        <label for="data_coleta">Data de coleta</label>
+        <input type="date" id="data_coleta" name="data_coleta">
+        
+        <label for="hora_coleta">Hora da coleta</label>
+        <input type="time" id="hora_coleta" name="hora_coleta">
+        
+        <label for="chuva_48h">Chuva nas últimas 48h?</label>
+        <select id="chuva_48h" name="chuva_48h">
+          <option value="Sim">Sim</option>
+          <option value="Não">Não</option>
+        </select>
+      </div>
+      
+      <div class="form-section">
+        <label>Monitoramento da qualidade da água - Parâmetros Básicos</label>
+        
+        <label for="turbidez_data_analise">Turbidez (uT) - Data da análise</label>
+        <input type="date" id="turbidez_data_analise" name="turbidez_data_analise">
+        
+        <!-- Adicione os outros campos da Parte IV - Parâmetros Básicos aqui -->
+      </div>
+      
+      <div class="form-section">
+        <label>Monitoramento de agrotóxicos</label>
+        
+        <label for="d2_data_analise">2,4 D - VMP: 30 µg/L - Data da análise</label>
+        <input type="date" id="d2_data_analise" name="d2_data_analise">
+        
+        <!-- Adicione os outros campos do Monitoramento de agrotóxicos aqui -->
+      </div>
+      
+      <input type="submit" value="Enviar">
+    </form>
+    
+    <button class="pdf-button" onclick="generatePDF()">Salvar como PDF</button>
+  </div>
+
+  <div class="image">
+    <img src="imagem/logo.JPG">
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
+  <script>
+    function generatePDF() {
+      const form = document.getElementById('form');
+      const opt = {
+        margin: 0.5,
+        filename: 'formulario.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+      };
+      html2pdf().set(opt).from(form).save();
+    }
+  </script>
+</body>
+</html>
